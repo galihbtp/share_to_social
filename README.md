@@ -1,11 +1,11 @@
 
 # share_to_social Package
- is a powerful Flutter package that simplifies sharing files to popular social media platforms like TikTok, Snapchat, and Instagram. With this package, you can enable seamless sharing of images, videos, and other files directly from your app to these platforms, enhancing user engagement and making social media integration effortless.
+is a powerful Flutter package that simplifies sharing files to popular social media platforms like TikTok, Snapchat, and Instagram. With this package, you can enable seamless sharing of images, videos, and other files directly from your app to these platforms, enhancing user engagement and making social media integration effortless.
 
-![demo1](images/tiktok.gif)
-![demo2](images/sticker.gif)
-![demo3](images/insta.gif)
-![demo4](images/snapchat.gif)
+![demo1](https://github.com/Mohamed1226/share_to_social/raw/main/example/images/tiktok.gif)
+![demo2](https://github.com/Mohamed1226/share_to_social/raw/main/example/images/sticker.gif)
+![demo3](https://github.com/Mohamed1226/share_to_social/raw/main/example/images/insta.gif)
+![demo4](https://github.com/Mohamed1226/share_to_social/raw/main/example/images/snapchat.gif)
 
 ## Features
 ### TikTok Integration:
@@ -165,15 +165,15 @@ override func application(_ application: UIApplication,
 
 ```
 you can test tiktok by using sandbox client key but you must add your account here
-![Image Description](images/tiktok_demo_user.png)
+![Image Description](https://github.com/Mohamed1226/share_to_social/raw/main/example/images/tiktok_demo_user.png)
 
 
 ## Snapchat Setup
- you must create app in snapchat developer
- Don’t forget to add your applicationID for android and app bundle for ios in your Snapchat app.
- like this image
+you must create app in snapchat developer
+Don’t forget to add your applicationID for android and app bundle for ios in your Snapchat app.
+like this image
 
- ![Image Description](images/snapchat_appids.png)
+![Image Description](https://github.com/Mohamed1226/share_to_social/raw/main/example/images/snapchat_appids.png)
 
 ### for android
 no need to do anything
@@ -194,7 +194,7 @@ Add the following configurations in your Info.plist:
 ```
 to use staging client id to need to add testing users in demo user
 
-![Image Description](images/snapchat_demo_user.png)
+![Image Description](https://github.com/Mohamed1226/share_to_social/raw/main/example/images/snapchat_demo_user.png)
 
 ## Instagram Setup
 
@@ -224,7 +224,7 @@ If you would like to contribute to the plugin (e.g. by improving the documentati
 
 ### Author
 
-This social_sharing_plus plugin for Flutter is developed by [Mohamed tawfiq](https://github.com/Mohamed1226). You can contact me at <mohamed.adel.dev9@gmail.com>
+This share_to_social plugin for Flutter is developed by [Mohamed tawfiq](https://github.com/Mohamed1226). You can contact me at <mohamed.adel.dev9@gmail.com>
 
 
 ## License
