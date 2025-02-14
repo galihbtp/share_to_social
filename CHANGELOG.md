@@ -13,3 +13,6 @@
 
 ## 1.0.4
 - Fixed GIF display issue on pub.dev by changing image links from git raw.
+
+## 1.0.5
+- add publishing account.
