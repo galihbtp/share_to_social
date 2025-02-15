@@ -35,6 +35,8 @@ Share text as strings.
 
 - [Instagram Setup](#instagram-setup)
 
+- [AirDrop share](#airdrop-share)
+
 - [Issues](#issues)
 
 - [Contribute](#contribute)
@@ -49,7 +51,7 @@ Share text as strings.
 
 You need to request permission in your app as follows:
 
-```dart
+```
 var status = await Permission.photos.request();
 ```
 
@@ -167,6 +169,24 @@ override func application(_ application: UIApplication,
 you can test tiktok by using sandbox client key but you must add your account here
 ![Image Description](https://github.com/Mohamed1226/share_to_social/raw/main/example/images/tiktok_demo_user.png)
 
+Just then use the package code
+
+```
+try {
+if (Platform.isIOS) {
+    await Tiktok.shareToIos(
+    files: filePaths,
+    filesType: fileType,
+    redirectUrl:
+    "yourapp://tiktok-share");
+     } else {
+       Tiktok.shareToAndroid(filePaths);
+       }
+    } catch (e, s) {
+      log("error is $e  $s");
+      AppToast.showErrorToast(e.toString());
+      }
+```
 
 ## Snapchat Setup
 you must create app in snapchat developer
@@ -196,6 +216,29 @@ to use staging client id to need to add testing users in demo user
 
 ![Image Description](https://github.com/Mohamed1226/share_to_social/raw/main/example/images/snapchat_demo_user.png)
 
+
+Just then use the package code
+
+```
+try {
+       await SnapChat.share(
+       clintID: "add your client id",
+       files: filePaths);
+    } catch (e, s) {
+      log("error is $e  $s");
+      AppToast.showErrorToast(e.toString());
+      }
+```
+```
+try {
+       await SnapChat.shareAsSticker(
+       clintID: "add your client id", stickerPath: filePath);
+    } catch (e, s) {
+      log("error is $e  $s");
+      AppToast.showErrorToast(e.toString());
+      }
+```
+
 ## Instagram Setup
 
 ### for android
@@ -212,6 +255,29 @@ Add the following configurations in your Info.plist:
 </array>
 <key>UIFileSharingEnabled</key>
 <true/>
+```
+Just then use the package code
+
+```
+try {
+       await Instagram.share(filePaths);
+    } catch (e, s) {
+      log("error is $e  $s");
+      AppToast.showErrorToast(e.toString());
+      }
+```
+
+### AirDrop share
+
+Just then use the package code
+
+```
+try {
+       wait AirDrop.share("sharing this text");
+    } catch (e, s) {
+      log("error is $e  $s");
+      AppToast.showErrorToast(e.toString());
+      }
 ```
 
 ### Issues

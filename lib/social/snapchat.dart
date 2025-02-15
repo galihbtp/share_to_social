@@ -1,7 +1,8 @@
 import 'dart:developer';
 import 'package:flutter/services.dart';
-
+///
 class SnapChat {
+  ///
   static const platform = MethodChannel('social_sharing');
 
   /// this add sticker to camera in snapchat
@@ -28,7 +29,7 @@ class SnapChat {
       log("Failed with error : '${e.message}'. \n $s");
       throw (e, s);
     } catch (e, s) {
-      log("Failed with error : '${e}'. \n $s");
+      log("Failed with error : $e \n $s");
       throw (e, s);
     }
   }
@@ -45,7 +46,7 @@ class SnapChat {
       log("Failed with error : '${e.message}'. \n $s");
       throw (e, s);
     } catch (e, s) {
-      log("Failed with error : '${e}'. \n $s");
+      log("Failed with error : $e \n $s");
       throw (e, s);
     }
   }
