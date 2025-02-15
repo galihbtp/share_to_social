@@ -34,7 +34,8 @@ class SnapChat {
   }
 
   /// share multi files videos or images
-  static Future<void> share({required String clintID, required List<String> files}) async {
+  static Future<void> share(
+      {required String clintID, required List<String> files}) async {
     try {
       await platform.invokeMethod('launchSnapchatPreviewWithMultipleFiles', {
         'filePaths': files,

@@ -60,8 +60,8 @@ class _MyAppState extends State<MyApp> {
               Center(
                 child: ElevatedButton(
                   onPressed: () async {
-                    FilePickerResult? result =
-                        await FilePicker.platform.pickFiles(allowMultiple: true);
+                    FilePickerResult? result = await FilePicker.platform
+                        .pickFiles(allowMultiple: true);
 
                     if (result != null) {
                       setState(() {
@@ -129,7 +129,8 @@ class _MyAppState extends State<MyApp> {
   shareSticker() async {
     if (_files.isEmpty) return;
     try {
-      await SnapChat.shareAsSticker(clintID: "add your client id", stickerPath: _files.first.path!);
+      await SnapChat.shareAsSticker(
+          clintID: "add your client id", stickerPath: _files.first.path!);
     } catch (e, s) {
       log("error is $e  $s");
       AppToast.showErrorToast(e.toString());
@@ -138,7 +139,8 @@ class _MyAppState extends State<MyApp> {
 }
 
 class SocialShareDialog {
-  static open({required List<PlatformFile> files, required BuildContext context}) {
+  static open(
+      {required List<PlatformFile> files, required BuildContext context}) {
     final filePaths = files.map((file) => file.path!).toList();
     return showDialog(
       context: context,
@@ -158,8 +160,9 @@ class SocialShareDialog {
                 children: [
                   Container(
                     padding: const EdgeInsets.all(16),
-                    decoration:
-                        BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(26)),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(26)),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -186,7 +189,8 @@ class SocialShareDialog {
                                 onPressed: () async {
                                   try {
                                     await SnapChat.share(
-                                        clintID: "add your client id", files: filePaths);
+                                        clintID: "add your client id",
+                                        files: filePaths);
                                   } catch (e, s) {
                                     log("error is $e  $s");
                                     AppToast.showErrorToast(e.toString());
@@ -197,8 +201,9 @@ class SocialShareDialog {
                             const SizedBox(width: 4),
                             SocialButton(
                                 onPressed: () async {
-                                  final fileType = determineFileType(
-                                      files.map((file) => file.extension).toList());
+                                  final fileType = determineFileType(files
+                                      .map((file) => file.extension)
+                                      .toList());
                                   if (fileType == null) return;
 
                                   try {
@@ -206,7 +211,8 @@ class SocialShareDialog {
                                       await Tiktok.shareToIos(
                                           files: filePaths,
                                           filesType: fileType,
-                                          redirectUrl: "yourapp://tiktok-share");
+                                          redirectUrl:
+                                              "yourapp://tiktok-share");
                                     } else {
                                       Tiktok.shareToAndroid(filePaths);
                                     }
@@ -250,7 +256,8 @@ class SocialShareDialog {
               ),
             ),
             backgroundColor: Colors.white,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
             contentPadding: EdgeInsets.zero,
             insetPadding: const EdgeInsets.symmetric(horizontal: 16),
           ),
@@ -261,7 +268,11 @@ class SocialShareDialog {
 }
 
 class SocialButton extends StatelessWidget {
-  const SocialButton({super.key, required this.icon, required this.onPressed, required this.title});
+  const SocialButton(
+      {super.key,
+      required this.icon,
+      required this.onPressed,
+      required this.title});
 
   final String icon, title;
   final Function onPressed;

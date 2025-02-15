@@ -4,7 +4,9 @@ import 'package:share_to_social/social_sharing_platform_interface.dart';
 import 'package:share_to_social/social_sharing_method_channel.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-class MockSocialSharingPlatform with MockPlatformInterfaceMixin implements SocialSharingPlatform {
+class MockSocialSharingPlatform
+    with MockPlatformInterfaceMixin
+    implements SocialSharingPlatform {
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
 }
