@@ -16,3 +16,6 @@
 
 ## 1.0.5
 - fix package points.
+
+## 1.0.6
+- fix share to tiktok.
