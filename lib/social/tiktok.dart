@@ -26,7 +26,7 @@ class Tiktok {
       required String redirectUrl,
       required String filesType}) async {
     try {
-      await platform.invokeMethod('shareToTikTokMultiFiles1', {
+      await platform.invokeMethod('shareToTikTokMultiFiles', {
         'filePaths': files,
         "redirectUrl": redirectUrl,
         "fileType": filesType
