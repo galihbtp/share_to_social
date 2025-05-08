@@ -15,10 +15,10 @@ A new Flutter project.
   s.static_framework = true
 
   s.dependency 'SnapSDK', '~> 1.15.0'
-  s.dependency 'TikTokOpenSDK', '~> 5.0.15'
-  s.dependency 'TikTokOpenSDKCore', '~> 2.4.0'
-  s.dependency 'TikTokOpenAuthSDK', '~> 2.4.0'
-  s.dependency 'TikTokOpenShareSDK', '~> 2.4.0'
+
+  s.dependency 'TikTokOpenSDKCore', '>= 2.4.0'
+  s.dependency 'TikTokOpenAuthSDK', '>= 2.4.0'
+  s.dependency 'TikTokOpenShareSDK', '>= 2.4.0'
 
   s.pod_target_xcconfig = {
     'DEFINES_MODULE' => 'YES',
