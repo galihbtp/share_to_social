@@ -19,3 +19,6 @@
 
 ## 1.0.6
 - fix share to tiktok.
+
+## 1.0.7
+- update tiktok sdk.
