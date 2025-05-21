@@ -117,7 +117,7 @@ class SocialSharingPlugin: FlutterPlugin, MethodCallHandler {
 
       // Grant TikTok read permission for each URI
       context.grantUriPermission(
-        "com.zhiliaoapp.musically",
+        "com.ss.android.ugc.trill",
         uri,
         Intent.FLAG_GRANT_READ_URI_PERMISSION
       )
@@ -126,7 +126,7 @@ class SocialSharingPlugin: FlutterPlugin, MethodCallHandler {
     val shareIntent = Intent(Intent.ACTION_SEND_MULTIPLE).apply {
       putExtra(Intent.EXTRA_STREAM, uris)
       type = "*/*"
-      setPackage("com.zhiliaoapp.musically") // TikTok's package name
+      setPackage("com.ss.android.ugc.trill") // TikTok's package name
       addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION) // Grant read permissions
       addFlags(Intent.FLAG_ACTIVITY_NEW_TASK) // Add this flag for non-Activity context
     }
@@ -137,7 +137,7 @@ class SocialSharingPlugin: FlutterPlugin, MethodCallHandler {
 //
 //    /// todo according to requirements
 //    shareIntent.type = "*/*"
-//    shareIntent.setPackage("com.zhiliaoapp.musically") // TikTok's package name
+//    shareIntent.setPackage("com.ss.android.ugc.trill") // TikTok's package name
     context.startActivity(shareIntent)
   }
 
